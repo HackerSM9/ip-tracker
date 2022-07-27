@@ -16,8 +16,8 @@ echo -e "$yellow |   |   |  \___  \  |  |  / __ \|  |_|  |_\  ___/|  | \/ "
 echo -e "$yellow |___|___|  /____  > |__| (____  /____/____/\___  >__|    "
 echo -e "$yellow          \/     \/            \/               \/        "
 echo ""
-echo -e "$orange [INFO] $yellow Tool Name: IpHack  "
-echo -e "$orange [INFO] $yellow Developer: Misha Korzhik " 
+echo -e "$orange [INFO] $yellow Tool Name: Ip-Tracker  "
+echo -e "$orange [INFO] $yellow Developer: HackerSM9 " 
 echo -e "$orange [INFO] $yellow License  : Apache License 2.0 "  
 echo ""
 
@@ -57,7 +57,7 @@ else
 echo -e "$red[~]-[lolcat].......................[ FAILED ]"
 sleep 1.5
 echo -e "$yellow[!][Installing Module lolcat...]"
-apt install lolcat
+pip install lolcat
 fi
 
 echo -e "$green[>]———————————————[Succesful Installed!]"
