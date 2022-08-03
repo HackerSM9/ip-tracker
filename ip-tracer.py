@@ -16,14 +16,14 @@ print ('''
 ██║██║░░░░░░░░░░░░░░██║░░░██║░░██║██║░░██║╚█████╔╝██║░╚██╗███████╗██║░░██║
 ╚═╝╚═╝░░░░░░░░░░░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝\033[0m
 ''')
-print"\033[1;33m==================================================================================================\033[1;33m"
-print ""   
-print	"\033[1;32mAuthor			: HackerSM9\033[1;32m"
-print	"\033[1;32mGithub			: https://github.com/HackerSM9/\033[1;32m"
-print ""
-print"\033[1;33m==================================================================================================\033[1;33m"
+print("\033[1;33m==================================================================================================\033[1;33m")
+print ("")
+print("\033[1;32mAuthor                 : HackerSM9\033[1;32m")
+print("\033[1;32mGithub                 : https://github.com/HackerSM9/\033[1;32m")
+print ("")
+print("\033[1;33m==================================================================================================\033[1;33m")
 print ("\n\033[1;33mYour IP: \033[1;33m" + result1['query'])
-print ("\033[1;32mIf You Do Not Want To Track Type Exit\033[1;32m\n")
+print("\033[1;32mIf You Do Not Want To Track Type Exit\033[1;32m\n")
 
 while True:
     ip = raw_input("\033[1;36mEnter Your Target IP: \033[1;36m")
@@ -72,8 +72,8 @@ while True:
             print ("\033[1;36mZip: \033[1;36m" + result['zip'])
             print ("\033[1;33mTimeZone: \033[1;33m" + result1['timezone'])
             print ("\033[1;33misp: \033[1;33m" + result1['isp'])
-	    print ("Do you want to find the exact location with Google Maps?")
-	    print ("Then search the Google Map using the Latitude or longitude number")
+            print("Do you want to find the exact location with Google Maps?")
+            print ("Then search the Google Map using the Latitude or longitude number")
             print ("\033[1;36mLatitude: \033[1;36m" + lat)
             print ("\033[1;36mlongitude: \033[1;36m" + long)
             print ("\033[1;33mMore Information Of IP \033[1;33m:\n" + more)
