@@ -15,11 +15,11 @@ print ('''
    | | |  ___/   \-----\  | |  |  _  /   / /\ \| |    |  < |  __| |  _  /  
   _| |_| |                | |  | | \ \  / ____ \ |____| . \| |____| | \ \  
  |_____|_|                |_|  |_|  \_\/_/    \_\_____|_|\_\______|_|  \_\ 
-                                                                                                                                     
-\033[1;33m
-Author       : \033[1;32mHackerSM9\033[0m 
-Origin       : \033[1;32mMade in India\033[0m                      
-Github       : \033[1;32mhttps://github.com/HackerSM9/\033[0m      
+ 
+                                                                                                                                    
+\033[1;33mAuthor       : \033[1;32mHackerSM9\033[0m
+\033[1;33mOrigin       : \033[1;32mMade in India\033[0m
+\033[1;33mGithub       : \033[1;32mhttps://github.com/HackerSM9/\033[0m
 \033[0m
 ''')
 print ("\n\033[1;33mYour IP: \033[1;33m" + result1['query'])
