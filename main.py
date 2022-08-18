@@ -16,7 +16,7 @@ print ('''
  |_____|_|                |_|  |_|  \_\/_/    \_\_____|_|\_\______|_|  \_\ 
  
 \033[1;33m1) Your IP\n2) Track IP\n3) More Tools\n4) About\n5) Upgrade\n\033[0m''')
-print("\033[1;32m >>> Exit tool [ CTRL + Z ] <<< \033[1;32m\n")
+print(r+">>> Exit tool [ CTRL + Z ] <<< \n"+e)
 
 ip = int(input("\033[1;36mEnter Your Choice $ \033[1;36m"))
 if ip == 1:
