@@ -1,3 +1,37 @@
-import base64,codecs
-main = "aW1wb3J0IG9zLHN5cwppbXBvcnQgdXJsbGliMgppbXBvcnQganNvbgoKdXJsID0gImh0dHA6Ly9pcC1hcGkuY29tL2pzb24vIgpsb2FkMSA9IHVybGxpYjIudXJsb3Blbih1cmwpCnJlYWQxID0gbG9hZDEucmVhZCgpCnJlc3VsdDEgPSBqc29uLmxvYWRzKHJlYWQxKQpvcy5zeXN0ZW0oJ2NsZWFyJykKcHJpbnQgKCcnJwpcMDMzWzE7MzNtCiAgX19fX18gX19fX18gICAgICAgICAgIF9fX19fX18gX19fX18gICAgICAgICAgICBfX19fXyBfICBfX19fX19fXyBfX19fXyAgIAogfF8gICBffCAgX18gXCAgICAgICAgIHxfXyAgIF9ffCAgX18gXCAgICAgL1wgICAvIF9fX198IHwvIC8gIF9fX198ICBfXyBcICAKICAgfCB8IHwgfF9fKSB8IFwtLS0tLVwgICB8IHwgIHwgfF9fKSB8ICAgLyAgXCB8IHwgICAgfCAnIC98IHxfXyAgfCB8X18pIHwgCiAgIHwgfCB8ICBfX18vICAgXC0tLS0tXCAgfCB8ICB8ICBfICAvICAgLyAvXCBcfCB8ICAgIHwgIDwgfCAgX198IHwgIF8gIC8gIAogIF98IHxffCB8ICAgICAgICAgICAgICAgIHwgfCAgfCB8IFwgXCAgLyBfX19fIFwgfF9fX198IC4gXHwgfF9fX198IHwgXCBcICAKIHxfX19fX3xffCAgICAgICAgICAgICAgICB8X3wgIHxffCAgXF9cL18vICAgIFxfXF9fX19ffF98XF9cX19fX19ffF98ICBcX1wgCiAKXDAzM1sxOzMzbUF1dGhvciAgICAgICA6IFwwMzNbMTszMm1IYWNrZXJTTTlcMDMzWzBtClwwMzNbMTszM21PcmlnaW4gICAgICAgOiBcMDMzWzE7MzJtTWFkZSBpbiBJbmRpYVwwMzNbMG0KXDAzM1sxOzMzbUdpdGh1YiAgICAgICA6IFwwMzNbMTszMm1odHRwczovL2dpdGh1Yi5jb20vSGFja2VyU005L1wwMzNbMG0KXDAzM1swbQonJycpCnByaW50ICgiXG5cMDMzWzE7MzNtWW91ciBJUDogXDAzM1sxOzMzbSIgKyByZXN1bHQxWydxdWVyeSddKQpwcmludCgiXDAzM1sxOzMybUlmIFlvdSBEbyBOb3QgV2FudCBUbyBUcmFjayBUeXBlIEV4aXRcMDMzWzE7MzJtXG4iKQoKd2hpbGUgVHJ1ZToKICAgIGlwID0gcmF3X2lucHV0KCJcMDMzWzE7MzZtRW50ZXIgWW91ciBUYXJnZXQgSVA6IFwwMzNbMTszNm0iKQoKICAgIGlmIGlwID09ICdleGl0JzoKICAgICAgICBicmVhawogICAgZWxzZToKICAgICAgICAKICAgICAgICBhcGkgPSAiaHR0cDovL2FwaS5pcHN0YWNrLmNvbS8iCiAgICAgICAgbG9hZCA9IHVybGxpYjIudXJsb3BlbihhcGkgKyBpcCArICc/YWNjZXNzX2tleT1mZDBjMWVhZTNjMmQyN2VlNjc2YWYwZGIyYjg2NGIwZScpCiAgICAgICAgcmVhZCA9IGxvYWQucmVhZCgpCiAgICAgICAgcmVzdWx0ID0ganNvbi5sb2FkcyhyZWFkKQoKICAgICAgICAKICAgICAgICB1cmwgPSAiaHR0cDovL2lwLWFwaS5jb20vanNvbi8iCiAgICAgICAgbG9hZDEgPSB1cmxsaWIyLnVybG9wZW4odXJsICsgaXApCiAgICAgICAgcmVhZDEgPSBsb2FkMS5yZWFkKCkKICAgICAgICByZXN1bHQxID0ganNvbi5sb2FkcyhyZWFkMSkKCgoKCgogICAgICAgIGlmIHJlc3VsdDFbJ3N0YXR1cyddID09ICdzdWNjZXNzJzoKICAgICAgICAgICAgIyBsYXRpdHVkZQogICAgICAgICAgICBsYXRpID0gcmVzdWx0WydsYXRpdHVkZSddCiAgICAgICAgICAgIGxhdCA9ICJ7Oi40Zn0iLmZvcm1hdChsYXRpKQogICAgICAgICAgICAjIGxvbmdpdHVkZQogICAgICAgICAgICBsb24gPSByZXN1bHRbJ2xvbmdpdHVkZSddCiAgICAgICAgICAgIGxvbmcgPSAiezouNGZ9Ii5mb3JtYXQobG9uKQoKICAgICAgICAgICAgIyBtb3JlIGluZm8KICAgICAgICAgICAgbW9yZSA9IGpzb24uZHVtcHMocmVzdWx0Wydsb2NhdGlvbiddKQoKICAgICAgICAgICAgIyBwcmludGluZyBpbmZvcm1hdGlvbgogICAgICAgICAgICBwcmludCAoIlxuXDAzM1sxOzMzbUFsbCBUaGUgSW5mb3JtYXRpb24gT2YgSVAgSXMgSGVyZSBcMDMzWzE7MzNtWyIgKyBpcCArICJdIDpcbiIpCiAgICAgICAgICAgIHByaW50ICgiXDAzM1sxOzMzbUlQOiBcMDMzWzE7MzNtIiArIHJlc3VsdFsnaXAnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzJtSVAgVHlwZTogXDAzM1sxOzMybSIgKyByZXN1bHRbJ3R5cGUnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzRtQ29udGluZW50IE5hbWU6IFwwMzNbMTszNG0iICsgcmVzdWx0Wydjb250aW5lbnRfbmFtZSddKQogICAgICAgICAgICBwcmludCAoIlwwMzNbMTszNG1Db250aW5lbnQgQ29kZTogXDAzM1sxOzM0bSIgKyByZXN1bHRbJ2NvbnRpbmVudF9jb2RlJ10pCiAgICAgICAgICAgIHByaW50ICgiXDAzM1sxOzMzbUNvdW50cnk6IFwwMzNbMTszM20iICsgcmVzdWx0Wydjb3VudHJ5X25hbWUnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzNtQ291bnRyeSBDb2RlOiBcMDMzWzE7MzNtIiArIHJlc3VsdDFbJ2NvdW50cnlDb2RlJ10pCiAgICAgICAgICAgIHByaW50ICgiXDAzM1sxOzMybVJlZ2lvbiBOYW1lOiBcMDMzWzE7MzJtIiArIHJlc3VsdFsncmVnaW9uX25hbWUnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzJtUmVnaW9uIENvZGU6IFwwMzNbMTszMm0iICsgcmVzdWx0WydyZWdpb25fY29kZSddKQogICAgICAgICAgICBwcmludCAoIlwwMzNbMTszNm1DaXR5OiBcMDMzWzE7MzZtIiArIHJlc3VsdFsnY2l0eSddKQogICAgICAgICAgICBwcmludCAoIlwwMzNbMTszNm1aaXA6IFwwMzNbMTszNm0iICsgcmVzdWx0Wyd6aXAnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzNtVGltZVpvbmU6IFwwMzNbMTszM20iICsgcmVzdWx0MVsndGltZXpvbmUnXSkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzNtaXNwOiBcMDMzWzE7MzNtIiArIHJlc3VsdDFbJ2lzcCddKQogICAgICAgICAgICBwcmludCAoIkRvIHlvdSB3YW50IHRvIGZpbmQgdGhlIGV4YWN0IGxvY2F0aW9uIHdpdGggR29vZ2xlIE1hcHM/IikKICAgICAgICAgICAgcHJpbnQgKCJUaGVuIHNlYXJjaCB0aGUgR29vZ2xlIE1hcCB1c2luZyB0aGUgTGF0aXR1ZGUgb3IgbG9uZ2l0dWRlIG51bWJlciIpCiAgICAgICAgICAgIHByaW50ICgiXDAzM1sxOzM2bUxhdGl0dWRlOiBcMDMzWzE7MzZtIiArIGxhdCkKICAgICAgICAgICAgcHJpbnQgKCJcMDMzWzE7MzZtbG9uZ2l0dWRlOiBcMDMzWzE7MzZtIiArIGxvbmcpCiAgICAgICAgICAgIHByaW50ICgiXDAzM1sxOzMzbU1vcmUgSW5mb3JtYXRpb24gT2YgSVAgXDAzM1sxOzMzbTpcbiIgKyBtb3JlKQogICAgICAgICAgICBwcmludCAoIlxuXG4iKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHByaW50ICgiXG5cMDMzWzE7MzFtU29ycnksIFBsZWFzZSBUeXBlIFRoZSBJUFsiICsgaXAgKyAiXSBQbGVhc2UgdHJ5IGFnYWluXDAzM1sxOzMxbVxuIik="
-magic = eval(compile(base64.b64decode(eval('\x6d\x61\x69\x6e')),'\x3c\x73\x74\x72\x69\x6e\x67\x3e','\x65\x78\x65\x63'))
+import os,sys
+import requests
+import json
+
+url = "http://ip-api.com/json/"
+r = '\033[1;31m'
+e = '\033[0m'
+os.system('clear')
+print ('''
+\033[1;33m
+  _____ _____           _______ _____            _____ _  ________ _____   
+ |_   _|  __ \         |__   __|  __ \     /\   / ____| |/ /  ____|  __ \  
+   | | | |__) | \-----\   | |  | |__) |   /  \ | |    | ' /| |__  | |__) | 
+   | | |  ___/   \-----\  | |  |  _  /   / /\ \| |    |  < |  __| |  _  /  
+  _| |_| |                | |  | | \ \  / ____ \ |____| . \| |____| | \ \  
+ |_____|_|                |_|  |_|  \_\/_/    \_\_____|_|\_\______|_|  \_\ 
+ 
+\033[1;33m1) Your IP\n2) Track IP\n3) More Tools\n4) About\n5) Upgrade\n\033[0m''')
+print("\033[1;32m >>> Exit tool [ CTRL + Z ] <<< \033[1;32m\n")
+
+ip = int(input("\033[1;36mEnter Your Choice $ \033[1;36m"))
+if ip == 1:
+    	os.system('cd .src && php .ip-tracer.php')
+if ip == 2:
+    	print("")
+    	os.system('cd .src && python3 track-ip.py')	
+if ip == 3:
+    	os.system('xdg-open https://github.com/HackerSM9')
+if ip == 4:
+        os.system('cd .src && python3 .a.py')
+if ip == 5:
+    	os.system('bash update')	
+elif (ip >= 6):
+    print(r+"Invalid Option Ó╭╮Ò"+e)
+else:
+    print("\033[1;46m\nDone !\033[0m")
+    print("\n")
