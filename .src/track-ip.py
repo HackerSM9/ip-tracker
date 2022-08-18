@@ -10,4 +10,5 @@ headers = {"Accept": "application/json"}
 
 response = requests.get(url, headers=headers)
 
+print("")
 print(g+response.text+e)
