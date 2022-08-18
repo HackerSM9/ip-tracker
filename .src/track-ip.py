@@ -1,6 +1,6 @@
 import requests
 
-y = '\033[0;33m'
+g = '\033[1;32m'
 t = '\033[1;36m'
 e = '\033[0m'
 ip = input(t+"Enter IP to Trace it >>> ")
@@ -10,4 +10,4 @@ headers = {"Accept": "application/json"}
 
 response = requests.get(url, headers=headers)
 
-print(y+response.text+e)
+print(g+response.text+e)
