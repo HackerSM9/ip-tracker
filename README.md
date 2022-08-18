@@ -4,5 +4,5 @@
 
 > **_Note_**:  This not for **illegal** usage..⚠️
 ### Requirements:
-- Python2 
+- Python3
 - PHP
