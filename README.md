@@ -14,6 +14,6 @@ cd ip-tracker
 bash setup.sh
 ```
 ## Screenshots
-<img src="">
-<img src="">
-<img src="">
+<img src="https://github.com/HackerSM9/ip-tracker/blob/main/.src/main-menu.jpg">
+<img src="https://github.com/HackerSM9/ip-tracker/blob/main/.src/Your-ip.jpg">
+<img src="https://github.com/HackerSM9/ip-tracker/blob/main/.src/Tracked-ip.jpg">
