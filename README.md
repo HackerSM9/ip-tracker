@@ -6,3 +6,9 @@
 ### Requirements:
 - Python3
 - PHP
+### Installation & Running the Tool
+```
+cd
+git clone https://github.com/HackerSM9/ip-tracker
+bash setup
+```
